@@ -44,4 +44,4 @@ app.use((err,req,res,next)=>{
 
 
 // app.listen(process.env.port,()=>console.log("server is on",process.env.port));
-const port=process.env.PORT||8080
+const port=process.env.port||8080
