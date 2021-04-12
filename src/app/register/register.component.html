@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img  src="https://www.zohowebstatic.com/sites/default/files/styles/product-home-page/public/notebook-logo.png?itok=ca_I-LRp" width="4%" height="4%"> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+  
+       
+  
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;"  href="#" ><i class="fas fa-home"></i>   Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;" href="#/register"><i class="far fa-registered"></i>   Register</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;"   href="#/login"><i class="fas fa-sign-in-alt"></i>   Login</a>
+          </li>
+  
+          
+   
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+<div style="background-image: url('https://i.pinimg.com/originals/85/6f/31/856f31d9f475501c7552c97dbe727319.jpg'); background-size: cover;">
+    <div class="row">
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 col-sm-2"></div>
+    <div style="font-family: cursive;" class="col-md-4 col-sm-8">
+
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+
+                <img src="https://zohowebstatic.com/sites/default/files/ogimage/notebook-logo.png" width="10%" height="10%">
+                <h2 style="font-family: cursive;"><b>Register</b></h2> 
+                <h4 style="font-family: cursive;"><b>to access Notebook</b></h4>
+                <br><br>
+        
+
+
+                <form class="form row g-3 "     [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <input type="text" name="username" id="" class="form-control" style="font-family: cursive;" placeholder="Enter your Username" formControlName="username">
+                  <p style="color: red;" *ngIf="registerForm.get('username').hasError('required')&& !registerForm.get('username').untouched">Name is required**</p><br>
+
+
+                  <input type="text" name="email" id="" class="form-control" style="font-family: cursive;" placeholder="Enter your Email ID" formControlName="email">
+                  <p style="color: red;" *ngIf="registerForm.get('email').hasError('required')&& !registerForm.get('email').untouched">Email ID is required**</p><br>
+
+                  <input type="password" name="password" id="" class="form-control" style="font-family: cursive;" placeholder="Enter your Password" formControlName="password">
+                  <p style="color: red;" *ngIf="registerForm.get('password').hasError('required')&& !registerForm.get('password').untouched">Password is required**</p><br>
+
+
+                  <div class="col-6">
+                    <button style="font-family: cursive;" class="btn btn-success" type="submit" [disabled]="!registerForm.valid">Register</button>
+                </div>
+
+
+                  <div class="text-center mt-5">
+                    <h5 style="font-family: cursive;">Having an account?</h5>
+                    <button class="btn btn-primary"(click)="onChange()" style="font-family: cursive;">Login</button>
+                </div>
+
+                </form>
+
+        
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-2"></div>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+  
+    
+  
+
+
+
+
+

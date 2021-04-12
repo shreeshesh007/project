@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img  src="https://www.zohowebstatic.com/sites/default/files/styles/product-home-page/public/notebook-logo.png?itok=ca_I-LRp" width="4%" height="4%"> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+  
+       
+  
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;"  href="#" ><i class="fas fa-home"></i>   Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;" href="#/register"><i class="far fa-registered"></i>   Register</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link"  style="font-family: cursive;"   href="#/login"><i class="fas fa-sign-in-alt"></i>   Login</a>
+          </li>
+  
+          
+   
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+<div style="background-image: url('https://wallpaperaccess.com/full/1567834.jpg'); background-size: cover;">
+    <div class="row">
+    
+<div class="container-fluid">
+<div class="row mt-5">
+    <div class="col-md-4 col-sm-2"></div>
+    <div style="font-family: cursive;" class="col-md-4 col-sm-8">
+
+
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                
+                <img src="https://evernote.com/c/assets/features/notes-app/create-checklists.svg?b1cfb3b2492793f6" width="15%" height="15%">
+                <h2 style="font-family: cursive;"><b>Login</b></h2> 
+                <h4 style="font-family: cursive;"><b>to access Notebook</b></h4>
+                <br><br>
+
+                <form class="form row g-3 "     [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <input type="text" style="font-family: cursive;" name="username" id="" class="form-control" placeholder="Enter your Username" formControlName="username">
+                    <p style="color: red;" *ngIf="loginForm.get('username').hasError('required')&& !loginForm.get('username').untouched">Name is required**</p><br>
+
+
+                    <input type="password" style="font-family: cursive;" name="password" id="" class="form-control" placeholder="Enter your Password" formControlName="password">
+                    <p style="color: red;" *ngIf="loginForm.get('password').hasError('required')&& !loginForm.get('password').untouched">Password is required**</p><br>
+
+                    <div class="col-6">
+                        <button class="btn btn-success" style="font-family: cursive;" type="submit" [disabled]="!loginForm.valid" >Login</button>
+                    </div>
+                    <br>
+                    <a routerLink="" style="font-family: cursive;" (click)="moveToPasswordReset()">Forget password?</a>
+
+                    <div class="text-center mt-5">
+                        <h5 style="font-family: cursive;">Don't have an account?</h5>
+                        <button class="btn btn-primary"(click)="onChange()" style="font-family: cursive;" >Register</button>
+                    </div>
+
+                </form>
+
+                    
+            </div>
+</div>
+<div class="col-md-4 col-sm-2">
+     
+</div>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br>
+</div>
+
+
+
